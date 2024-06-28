@@ -14,8 +14,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, imgSrc, b
         <Image
           src={imgSrc}
           alt={`${title} logo`}
-          layout="fill"
-          objectFit="cover"
+          fill
+          style={{ objectFit: 'cover' }}
           className="rounded-lg"
         />
       </div>
