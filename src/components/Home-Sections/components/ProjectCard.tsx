@@ -1,31 +1,24 @@
 import Image from 'next/image';
 
-type ProjectCardProps = {
+interface ProjectCardProps {
   title: string;
   description: string;
   imgSrc: string;
   buttonText: string;
-};
+  imgFirst: boolean;
+}
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, imgSrc, buttonText }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, imgSrc, buttonText, imgFirst }) => {
   return (
-    <div className="flex items-center bg-gray-200 p-4 rounded-lg shadow-md transition transform hover:scale-105">
-      <div className="relative w-1/3 h-40">
-        <Image
-          src={imgSrc}
-          alt={`${title} logo`}
-          fill
-          style={{ objectFit: 'cover' }}
-          className="rounded-lg"
-        />
-      </div>
-      <div className="flex-1 text-center px-4">
-        <h2 className="text-xl font-bold">{title}</h2>
-        <p className="text-gray-700">{description}</p>
-        <button className="mt-4 px-4 py-2 bg-yellow-500 text-gray-800 rounded-lg hover:bg-orange-500 hover:text-white transition">{buttonText}</button>
+    <div className={`flex flex-col gap-2 justify-center md:flex-row bg-white p-6 rounded-lg shadow-md ${imgFirst ? '' : 'md:flex-row-reverse'}`}>
+      <Image src={imgSrc} alt={title} width={250} height={250} className="max-w-xs md:w-1/2 md:mb-0 rounded-full shadow-lg" />
+      <div className="md:w-1/2 flex flex-col gap-4 text-center items-center justify-evenly ">
+        <h3 className="text-4xl text-black font-black underline decoration-double decoration-red-300">{title}</h3>
+        <p className="text-gray-600 text-2xl">{description}</p>
+        <button className="w-fit p-3 rounded-lg text-gray-800 bg-yellow-500 hover:bg-yellow-600 transition duration-300 transform hover:scale-105 shadow-lg">{buttonText}</button> {/* Added transform hover:scale-105 and shadow-lg */}
       </div>
     </div>
   );
-};
+}
 
 export default ProjectCard;
