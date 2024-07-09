@@ -9,7 +9,7 @@ export default function Page() {
       <WelcomeSection />
       <main>
         <section id="projects" className="main-section flex justify-evenly items-center flex-col gap-4">
-          <header>Projects</header>
+          <header className="">Projects</header>
           <ProjectCard
             title="LensByLara"
             description="A simple hobby that turned into a passion"
