@@ -1,3 +1,4 @@
+'use client';
 import { useState } from 'react';
 import Image from 'next/image';
 
@@ -5,7 +6,7 @@ interface ProjectCardProps {
   title: string;
   img: string;
   tags: string[];
-  bgColor: string;  // Accept any string as the background color
+  bgColor: string;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ title, img, tags, bgColor }) => {
