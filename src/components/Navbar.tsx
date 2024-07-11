@@ -19,7 +19,7 @@ const Navbar: React.FC = () => {
           <Link href="#projects" className="text-white hover:bg-yellow-600 px-3 py-2 rounded-md">Projects</Link>
           <Link href="#about" className="text-white hover:bg-yellow-600 px-3 py-2 rounded-md">About</Link>
           <Link href="#contact" className="text-white hover:bg-yellow-600 px-3 py-2 rounded-md">Contact</Link>
-          <Link href="/tech" className="text-white hover:bg-yellow-600 px-3 py-2 rounded-md">Tech</Link>
+          <Link href="/technology" className="text-white hover:bg-yellow-600 px-3 py-2 rounded-md">Technology</Link>
         </div>
         <div className="md:hidden">
           <button onClick={toggleMenu} className="text-white focus:outline-none">
@@ -33,7 +33,7 @@ const Navbar: React.FC = () => {
           <Link href="#projects" className="block text-white hover:bg-yellow-600 px-3 py-2 rounded-md">Projects</Link>
           <Link href="#about" className="block text-white hover:bg-yellow-600 px-3 py-2 rounded-md">About</Link>
           <Link href="#contact" className="block text-white hover:bg-yellow-600 px-3 py-2 rounded-md">Contact</Link>
-          <Link href="/tech" className="block text-white hover:bg-yellow-600 px-3 py-2 rounded-md">Tech</Link>
+          <Link href="/technology" className="block text-white hover:bg-yellow-600 px-3 py-2 rounded-md">Technology</Link>
         </div>
       )}
     </nav>
